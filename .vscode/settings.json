@@ -1,0 +1,14 @@
+{
+  "intelephense.environment.includePaths": [
+    "C:/xampp/php/include",
+    "C:/xampp/php/pear",
+    "C:/xampp/htdocs/wordpress",
+    "C:/xampp/htdocs/wordpress/wp-includes",
+    "C:/xampp/htdocs/wordpress/wp-admin"
+  ],
+  "intelephense.environment.documentRoot": "C:/xampp/htdocs/wordpress",
+  "intelephense.files.associations": ["*.php", "**/*.php"],
+  "intelephense.diagnostics.undefinedFunctions": false,
+  "intelephense.diagnostics.undefinedConstants": false,
+  "intelephense.diagnostics.undefinedTypes": false
+}

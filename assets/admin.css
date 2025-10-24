@@ -1,0 +1,400 @@
+/* Local font (Readex Pro) */
+@font-face {
+  font-family: "Readex Pro";
+  src: url("./fonts/ReadexPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Readex Pro";
+  src: url("./fonts/ReadexPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Scope all styles to plugin wrap */
+.xppwots-wrap,
+.xppwots-wrap *:not(code):not(kbd):not(pre) {
+  font-family: "Readex Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+}
+
+.xppwots-wrap h1,
+.xppwots-wrap h2 {
+  font-weight: 700;
+}
+.xppwots-wrap .description {
+  color: #555;
+  margin-bottom: 14px;
+}
+
+/* Cards */
+.xppwots-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+.xppwots-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Form */
+.xppwots-form .xppwots-form-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.xppwots-input {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 10px;
+  min-width: 260px;
+}
+
+/* Notices */
+#xppwots-notices .notice {
+  margin-top: 10px;
+}
+
+/* Tweets Demo */
+.xppwots-tw-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.xppwots-profile {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #f9fafb;
+  border: 1px solid #eef2f7;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.xppwots-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+}
+.xppwots-profile-name {
+  font-weight: 700;
+}
+.xppwots-profile-handle {
+  color: #666;
+  font-size: 12px;
+}
+.xppwots-profile-bio {
+  margin: 0.25rem 0 0;
+  color: #444;
+}
+
+/* Grid of tweet cards */
+.xppwots-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 900px) {
+  .xppwots-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .xppwots-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.xppwots-tweet {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.xppwots-tweet:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+.xppwots-tweet-text {
+  white-space: pre-wrap;
+  line-height: 1.65;
+  color: #111;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+.xppwots-tweet-text a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.xppwots-tweet-text a:hover {
+  text-decoration: underline;
+}
+
+.xppwots-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  color: #444;
+  align-items: center;
+  justify-content: space-between;
+}
+.xppwots-metrics .left {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.xppwots-metrics .m {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.xppwots-date {
+  color: #666;
+  font-size: 12px;
+}
+
+.xppwots-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.xppwots-actions .button {
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+.xppwots-actions .button:hover {
+  transform: translateY(-1px);
+}
+
+/* States */
+.xppwots-state {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  color: #444;
+}
+.xppwots-spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: xppwots-spin 0.9s linear infinite;
+}
+@keyframes xppwots-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Records responsive table (desktop baseline) */
+.xppwots-table {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+}
+
+/* Legacy grid row styles (kept for safety with older markup) */
+.xppwots-table-head,
+.xppwots-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.xppwots-table-head {
+  background: #f9fafb;
+  font-weight: 700;
+}
+.xppwots-row-edit {
+  padding: 10px 0 0;
+  display: block;
+}
+.xppwots-edit-area {
+  width: 100%;
+}
+.xppwots-row-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.xppwots-inline-status {
+  font-size: 12px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Mobile stack: convert table to cards */
+@media (max-width: 1200px) {
+  .xppwots-wrap .xppwots-table thead {
+    display: none;
+  }
+  .xppwots-wrap .xppwots-table,
+  .xppwots-wrap .xppwots-table tbody,
+  .xppwots-wrap .xppwots-table tr,
+  .xppwots-wrap .xppwots-table td {
+    display: block;
+    width: 100%;
+  }
+  .xppwots-wrap .xppwots-table tr {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin: 10px 0;
+    background: #fff;
+  }
+  .xppwots-wrap .xppwots-table td {
+    padding: 10px 12px;
+    border: none !important;
+  }
+  .xppwots-wrap .xppwots-table td + td {
+    border-top: 1px solid #f1f5f9 !important;
+  }
+  .xppwots-wrap .xppwots-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 4px;
+  }
+  .xppwots-wrap .xppwots-group-details td {
+    padding: 0 !important;
+  }
+  .xppwots-wrap .xppwots-group-details .xppwots-group-list {
+    padding: 10px;
+  }
+}
+
+/* Subtle entry animation for cards */
+.xppwots-tweet {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: xppwots-fadein 0.25s ease forwards;
+}
+@keyframes xppwots-fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hidden enforcement (keeps collapsed rows closed on mobile) */
+.xppwots-wrap [hidden] {
+  display: none !important;
+}
+.xppwots-state[hidden] {
+  display: none !important;
+}
+#xppwots-profile[hidden] {
+  display: none !important;
+}
+.xppwots-row-edit[hidden] {
+  display: none !important;
+}
+
+/* Buttons */
+.xppwots-wrap .button-success {
+  background-color: #22c55e;
+  border-color: #22c55e;
+  color: #fff;
+}
+.xppwots-wrap .button-success:hover,
+.xppwots-wrap .button-success:focus {
+  background-color: #16a34a;
+  border-color: #16a34a;
+  color: #fff;
+}
+
+/* Layout tweaks */
+.xppwots-wrap .xppwots-tw-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.xppwots-wrap .xppwots-input {
+  min-width: 220px;
+}
+.xppwots-wrap #xppwots-notices {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+/* =======================
+   7) Developer Page
+   ======================= */
+/* Developer page: two circular images side-by-side (300x300) */
+.xppwots-developer-page .xppwots-dev-avatars {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  margin: 16px 0 12px;
+  flex-wrap: nowrap;
+}
+.xppwots-developer-page .xppwots-dev-avatars img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #e5e7eb;
+  background: #fff;
+}
+.xppwots-developer-page .xppwots-dev-avatars figcaption {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0f172a;
+}
+/* (Optional) on very small screens, allow wrapping while keeping size */
+@media (max-width: 700px) {
+  .xppwots-developer-page .xppwots-dev-avatars {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.xppwots-developer-page .xppwots-dev-bio {
+  margin: 50px 0;
+  width: 700px;
+}
+.xppwots-developer-page .xppwots-dev-portfolio {
+  margin: 50px 0;
+  width: 700px;
+}
+@media (max-width: 1000px) {
+  .xppwots-developer-page .xppwots-dev-bio {
+    width: 100%;
+  }
+  .xppwots-developer-page .xppwots-dev-portfolio {
+    width: 100%;
+  }
+}
+.xppwots-developer-page .xppwots-dev-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 12px;
+}
+.xppwots-developer-page .xppwots-dev-links li {
+  margin: 4px 0;
+  font-size: 14px;
+}
